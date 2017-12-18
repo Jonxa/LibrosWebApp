@@ -12,7 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
   *Entity class to store the genders from our books.
@@ -23,13 +22,12 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Discos S.L Corporation
  */
 @Entity
-@Table(name="gender",schema="LibrosSL")
+@Table(name="Generos",schema="LibrosSL")
 @NamedQuery(
         name="findAllGeneros",
         query="Select s from Gender s ORDER BY s.codigo"
 )
 
-@XmlRootElement
 public class Gender implements Serializable {
 
     private static final long serialVersionUID = 1L;
